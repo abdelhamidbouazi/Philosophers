@@ -6,11 +6,11 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:02:39 by abouazi           #+#    #+#             */
-/*   Updated: 2022/08/23 23:51:39 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/08/30 12:36:39 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../../includes/philo.h"
 
 static int	getsign(char c)
 {

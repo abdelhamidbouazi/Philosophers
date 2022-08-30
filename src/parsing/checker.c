@@ -6,11 +6,11 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:12:35 by abouazi           #+#    #+#             */
-/*   Updated: 2022/08/24 00:37:39 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/08/30 12:36:25 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../../includes/philo.h"
 
 int ft_is_digit(int c)
 {
