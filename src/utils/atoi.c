@@ -1,58 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   atoi.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:02:39 by abouazi           #+#    #+#             */
-/*   Updated: 2022/08/30 12:36:39 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/01 23:37:07 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/philo.h"
 
-static int	getsign(char c)
+static int	result(int sc, int nm, int s)
 {
-	int	signn;
+	if (sc > 1)
+		return (0);
+	return (nm * s);
+}
 
-	signn = 1;
+static int	sn(char c)
+{
+	int	s;
+
+	s = 1;
 	if (c == '-')
 		return (-1);
-	return (signn);
+	return (s);
 }
-
-static int	rslt(int _signcount, int _number, int _sign)
-{
-	if (_signcount > 1)
-		return (0);
-	return (_number * _sign);
-}
-
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
 	int	i;
 	int	sign;
-	int	number;
-	int	signcount;
+	int	nm;
+	int	sc;
 
 	i = 0;
 	sign = 1;
-	number = 0;
-	signcount = 0;
-	while ((str[i] >= '\t' && str[i] <= '\r')
-		|| str[i] == '\n' || str[i] == ' ')
+	nm = 0;
+	sc = 0;
+	while ((s[i] >= '\t' && s[i] <= '\r')
+		|| s[i] == '\n' || s[i] == ' ')
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	while (s[i] == '-' || s[i] == '+')
 	{
-		signcount++;
-		sign *= getsign(str[i]);
+		sc++;
+		sign *= sn(s[i]);
 		i++;
 	}
-	while (str[i] > 47 && str[i] < 58)
+	while (s[i] > 47 && s[i] < 58)
 	{
-		number = number * 10 + (str[i] - 48);
+		nm = nm * 10 + (s[i] - 48);
 		i++;
 	}
-	return (rslt(signcount, number, sign));
+	return (result(sc, nm, sign));
 }

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   retard.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 21:02:30 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/01 18:08:56 by abouazi          ###   ########.fr       */
+/*   Created: 2022/09/01 18:25:30 by abouazi           #+#    #+#             */
+/*   Updated: 2022/09/01 18:30:33 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/philo.h"
+#include "../../includes/philo.h"
 
-int	main(int ac, char **av)
+void	retard(int64_t time_in_ms, t_container *cnt)
 {
-	t_container	*container;
-	
-	if (ac != 5 && ac != 6)
-		return (printf("Arguments number error"), 0);
-	checker(ac, av);
-	initializ_philos(&container, ac, av);
-	philo(container->philosophers);
-	printf("%d", container->collect->n_philos);
-	return (0);
+	int64_t	t_start;
+
+	t_start = g_time();
+	while (cnt->remember->status)
+	{
+		if (g_time() - t_start >= time_in_ms)
+			break ;
+		usleep(500);
+	}
 }
