@@ -6,10 +6,9 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 17:05:14 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 18:18:11 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:57:05 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../../includes/philo.h"
 
@@ -31,7 +30,7 @@ int	data_in(t_data **data, int ac, char **av)
 int	in_set(t_remember **rem, int numphi)
 {
 	t_remember	*remember;
-	int		j;
+	int			j;
 
 	remember = (t_remember *)malloc(sizeof(t_remember));
 	if (!remember)
@@ -72,17 +71,17 @@ int	phi_in(t_philos **phil, t_container *remember, \
 	return (FT_SUCCESS);
 }
 
-
 int	initializ_philos(t_container **cont, int ac, char **av)
 {
-    t_container	*cnt;
+	t_container	*cnt;
 
 	cnt = (t_container *)malloc(sizeof(t_container));
 	if (!cnt)
-		return (FT_SUCCESS);      
-   	data_in(&cnt->collect, ac, av);
-   	in_set(&cnt->remember, cnt->collect->n_philos);
-	phi_in(&cnt->philosophers, cnt, cnt->remember->mutex_forks, cnt->collect->n_philos);
+		return (FT_SUCCESS);
+	data_in(&cnt->collect, ac, av);
+	in_set(&cnt->remember, cnt->collect->n_philos);
+	phi_in(&cnt->philosophers, cnt, cnt->remember->mutex_forks, \
+			cnt->collect->n_philos);
 	*cont = cnt;
 	return (FT_SUCCESS);
 }

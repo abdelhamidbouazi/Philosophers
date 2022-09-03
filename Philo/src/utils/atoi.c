@@ -6,7 +6,7 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:02:39 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 18:16:06 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:47:55 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	sn(char c)
 		return (-1);
 	return (s);
 }
+
 int	ft_atoi(const char *s)
 {
 	int	i;

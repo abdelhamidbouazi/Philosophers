@@ -6,12 +6,12 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:02:36 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 18:19:04 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:54:50 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PHILO_H
-# define PHILO_H
+#	ifndef PHILO_H
+# 	define PHILO_H
 
 # include <stdlib.h>
 # include <pthread.h>
@@ -20,9 +20,8 @@
 # include <sys/time.h>
 # include <stdbool.h>
 
-#define FT_SUCCESS 0
-#define FT_FAILURE 1
-
+# define FT_SUCCESS 0
+# define FT_FAILURE 1
 
 typedef struct s_remember
 {
@@ -57,11 +56,10 @@ typedef struct s_container
 {
 	t_remember	*remember;
 	t_philos	*philosophers;
-	t_data	    *collect;
+	t_data		*collect;
 }	t_container;
 
-
-int 	checker(int ac, char **av);
+int		checker(int ac, char **av);
 int		ft_atoi(const char *str);
 int		initializ_philos(t_container **cont, int ac, char **av);
 int		in_set(t_remember **rem, int numphi);

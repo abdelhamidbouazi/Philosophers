@@ -6,7 +6,7 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 18:38:57 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 18:18:52 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:46:03 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*sup(void *args)
 {
 	t_philos	*philo;
-	int		i;
-	int		fl;
+	int			i;
+	int			fl;
 
 	philo = (t_philos *)args;
 	while (philo->cont->remember->status)
