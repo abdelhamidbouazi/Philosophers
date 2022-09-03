@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo_bonus.h                                      :+:      :+:    :+:   */
+/*   philo_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 01:44:42 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 01:51:38 by abouazi          ###   ########.fr       */
+/*   Created: 2022/09/03 01:44:46 by abouazi           #+#    #+#             */
+/*   Updated: 2022/09/03 01:52:14 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PHILO_BONUS_H
-# define PHILO_BONUS_H
+#include "../includes/philo_bonus.h"
 
-#include <stdio.h>
-
-# endif
+int main()
+{
+    printf("ssss");
+}
