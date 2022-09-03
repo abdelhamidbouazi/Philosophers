@@ -6,13 +6,11 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 18:38:57 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/01 23:42:06 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:18:52 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/philo.h"
-	
-    //Edite this
 
 void	*sup(void *args)
 {

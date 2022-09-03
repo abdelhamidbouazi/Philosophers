@@ -6,7 +6,7 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:02:36 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 01:13:50 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:19:04 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 
 typedef struct s_remember
 {
-	//Edite this
 	pthread_t		rem_thread;
 	bool			status;
 	pthread_mutex_t	*mutex_forks;

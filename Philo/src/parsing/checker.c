@@ -6,7 +6,7 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:12:35 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/03 01:08:41 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:17:05 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int ft_is_digit(int c)
 {
     if ((c >= '0' && c <= '9'))
-        return (1);
+        return (FT_FAILURE);
     else   
-        return (0);
+        return (FT_SUCCESS);
 }
 
 int ft_isalnum(char *s)
@@ -30,10 +30,10 @@ int ft_isalnum(char *s)
     while (s[i])
     {
         if (!ft_is_digit(s[i]))
-            return (1);
+            return (FT_FAILURE);
         i++;
     }
-    return (0);
+    return (FT_SUCCESS);
 }
 
 int checker(int ac, char **av)
@@ -58,5 +58,5 @@ int checker(int ac, char **av)
                 return (printf("don't enter 0"), -1);
         }
     }
-    return (0);
+    return (FT_SUCCESS);
 }

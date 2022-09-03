@@ -6,7 +6,7 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:02:39 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/01 23:37:07 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 18:16:06 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	result(int sc, int nm, int s)
 {
 	if (sc > 1)
-		return (0);
+		return (FT_SUCCESS);
 	return (nm * s);
 }
 
