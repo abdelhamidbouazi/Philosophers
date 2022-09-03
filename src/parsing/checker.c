@@ -6,7 +6,7 @@
 /*   By: abouazi <abouazi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:12:35 by abouazi           #+#    #+#             */
-/*   Updated: 2022/09/01 16:56:56 by abouazi          ###   ########.fr       */
+/*   Updated: 2022/09/03 01:08:41 by abouazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,18 +45,17 @@ int checker(int ac, char **av)
         i = 1;
         while (av[i])
         {
-            if (ft_is_digit(ft_atoi(av[i])) == 1)
-                return (printf("Enter numbers only!!"), 0);
+            if (ft_isalnum(av[i]))
+				return (printf("Don't enter Characters\n"), -1);
             i++;
         }
-        i = 1;
-        while (av[i])
+        i = 0;
+        while (av[++i])
         {
-            if (atoi(av[i]) < 0)
-                return (printf("Dont't enter negative numbers"), 0);
+            if (ft_atoi(av[i]) < 0)
+               return (printf("error"), -1);
             else if (ft_atoi(av[i]) == 0)
-                return (printf("Nothing should be 0"), 0);
-            i++;
+                return (printf("don't enter 0"), -1);
         }
     }
     return (0);
